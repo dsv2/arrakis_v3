@@ -14,5 +14,7 @@ public interface IUserService {
 
     public User getUserByUsername(String usersName );
 
+    public boolean verifyUser(String username, String password);
+
     public User updateUserDetails(User userToUpdate);
 }

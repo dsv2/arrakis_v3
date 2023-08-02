@@ -50,6 +50,15 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public boolean verifyUser(String username, String password) {
+
+        if ((itsUsersRepo.findByNameAndPassword(username, password)) != null) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
     public User updateUserDetails(User userToUpdate) {
         return itsUsersRepo.save(userToUpdate);
     }
