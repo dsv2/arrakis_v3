@@ -1,0 +1,21 @@
+{
+      "users": [
+            {
+      "username": "google@gmail.com",
+    "password": "password1"
+         },
+   {
+     "username": "google2@gmail.com",
+      "password": "password2"
+      },
+      {
+        "username": "google3@gmail.com",
+         "password": "password2"
+         },
+         {
+        "username": "google4@gmail.com",
+        "password": "password5"
+         }
+                            ]
+                            }
+      
