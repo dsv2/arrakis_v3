@@ -12,11 +12,7 @@ public interface IUserService {
 
     public long getNoOfUsers();
 
-    public boolean removeUser(long uniqueId);
-
-    public User getUserById(long uniqueId);
-
-    public User getUserByName(String usersName );
+    public User getUserByUsername(String usersName );
 
     public User updateUserDetails(User userToUpdate);
 }
