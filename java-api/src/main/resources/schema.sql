@@ -44,7 +44,7 @@ CREATE TABLE `security` (
   `isin` varchar(50) DEFAULT NULL,
   `cusip` varchar(50) DEFAULT NULL,
   `issuer_name` varchar(255) NOT NULL,
-  `maturity_date` datetime NOT NULL,
+  `maturity_date` date NOT NULL,
   `coupon` float NOT NULL,
   `type` varchar(255) NOT NULL,
   `face_value` float NOT NULL,
@@ -66,7 +66,10 @@ CREATE TABLE `trades` (
   `buy_sell` varchar(32) NOT NULL,
   `trade_date` datetime NOT NULL,
   `settlement_date` datetime NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  FOREIGN key (security_id) REFERENCES security(id),
+  FOREIGN key (counterparty_id) REFERENCES counterparty(id),
+  FOREIGN key (book_id) REFERENCES book(id)
 --  KEY `FK_security_id` (`security_id`),
 --  KEY `FK_counterparty_id` (`counterparty_id`),
 --  KEY `FK_book_id` (`book_id`)
