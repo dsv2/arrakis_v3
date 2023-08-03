@@ -22,9 +22,9 @@ public class UsersController {
 //    }
 
     @PostMapping("/users")
-    public boolean checkUser(@Valid @RequestBody String username, String password) {
+    public boolean checkUser(@Valid @RequestBody User user) {
         System.out.println("post mapping worked");
-        return userService.verifyUser(username, password);
+        return userService.verifyUser(user.getUsername(), user.getPassword());
     }
 
 

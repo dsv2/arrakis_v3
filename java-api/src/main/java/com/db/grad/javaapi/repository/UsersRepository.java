@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface UsersRepository extends JpaRepository<User, String> {
 
-    @Query(nativeQuery = true, value = "select * from user where username = :name")
+    @Query(nativeQuery = true, value = "select * from users where username = :name")
     List<User> findByName(User name);
 
-    @Query(nativeQuery = true, value = "select * from user where username = :username and password = :password")
+    @Query(nativeQuery = true, value = "select * from users where username = :username and password = :password")
     List<User> findByNameAndPassword(String username, String password);
 }
