@@ -1,8 +1,6 @@
-import { hostNameUrl } from "../config/api";
-import axios from "axios";
+import http from './axios-common';
 
 
-export const findPets = () => {
-  const pets = axios.get(`${hostNameUrl}/dogs`);
-  return pets;
-};
+export function saveUser(user){
+  return http.post("/user", user)
+}
