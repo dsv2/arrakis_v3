@@ -1,13 +1,12 @@
 package com.db.grad.javaapi.controller;
 
+import com.db.grad.javaapi.model.Dog;
 import com.db.grad.javaapi.model.User;
 import com.db.grad.javaapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,5 +20,11 @@ public class UsersController {
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+
+    @GetMapping("/users")
+    public User createUser(@Valid @RequestBody User user) {
+        return userService.addUser(user);
+    }
+
 
 }
