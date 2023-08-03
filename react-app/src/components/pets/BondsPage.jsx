@@ -6,13 +6,13 @@ import Row from 'react-bootstrap/Row'
 const BondsPage = () => {
 
   const Security = [
-    {"id":1,"ISIN":"Bruce Wayne","CUSIP":"Batman","issuer_name":"Martial Arts","maturity_date":1/1/22,"coupon":20,"type":government},
-    {"id":2,"ISIN":"Clark Kent","CUSIP":"Superman","issuer_name":"Flight","maturity_date":1/1/23,"coupon":20,"type":SOV},
-    {"id":3,"ISIN":"Jay Garrick","CUSIP":"The Flash","issuer_name":"Super-speed","maturity_date":2,"coupon":20,"type":government},
-    {"id":4,"ISIN":"Alan Scott","CUSIP":"Green Lantern","issuer_name":"Ring Creation","maturity_date":2,"coupon":20,"type":CORP},
-    {"id":5,"ISIN":"Helena Bertenelli","CUSIP":"The Huntress","issuer_name":"Crossbow Archery","maturity_date":3,"coupon":20,"type":government},
-    {"id":6,"ISIN":"Dr. Harleen Quinzel","CUSIP":"Harley Quinn","issuer_name":"Hammer-fighting","maturity_date":3,"coupon":20,"type":SOV},
-    {"id":7,"ISIN":"Floyd Lawton","CUSIP":"Deadshot","issuer_name":"Marksmaship","maturity_date":4,"coupon":20,"type":CORP},
+    {"id":1,"ISIN":"Bruce Wayne","CUSIP":"Batman","issuer_name":"Martial Arts","maturity_date":1/1/22,"coupon":20,"type":"government"},
+    {"id":2,"ISIN":"Clark Kent","CUSIP":"Superman","issuer_name":"Flight","maturity_date":1/1/23,"coupon":20,"type":"SOV"},
+    {"id":3,"ISIN":"Jay Garrick","CUSIP":"The Flash","issuer_name":"Super-speed","maturity_date":2,"coupon":20,"type":"government"},
+    {"id":4,"ISIN":"Alan Scott","CUSIP":"Green Lantern","issuer_name":"Ring Creation","maturity_date":2,"coupon":20,"type":"CORP"},
+    {"id":5,"ISIN":"Helena Bertenelli","CUSIP":"The Huntress","issuer_name":"Crossbow Archery","maturity_date":3,"coupon":20,"type":"government"},
+    {"id":6,"ISIN":"Dr. Harleen Quinzel","CUSIP":"Harley Quinn","issuer_name":"Hammer-fighting","maturity_date":3,"coupon":20,"type":"SOV"},
+    {"id":7,"ISIN":"Floyd Lawton","CUSIP":"Deadshot","issuer_name":"Marksmaship","maturity_date":4,"coupon":20,"type":"CORP"},
     
   ]
 
