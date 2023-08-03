@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { saveUser } from '../../services/PetServices';
 
 
 const LoginForm = () => {
@@ -6,26 +7,22 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = async () => {
-    // Fetch the loginData.json file
-    try {
-      const response = await fetch('data.json');
-      const data = await response.json();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let user = {};
+    user.username = username;
+    user.password = password;
+    console.log(user);
 
-      // Check if the entered credentials match any user in the JSON file
-      const user = data.users.find(user => user.username === username && user.password === password);
-
-      if (user) {
-        // Login successful, do something (e.g., redirect to a dashboard)
-        console.log('Login successful!');
-        setError('');
-      } else {
-        setError('Invalid username or password.');
-      }
-    } catch (error) {
-      console.error('Error fetching login data:', error);
-    }
-  };
+    saveUser(user)
+   .then(res => {
+      setUsername('');
+      setPassword('');
+      })
+    .catch(err=>{
+       console.log(err);
+      })
+  }
 
   return (
     <div>
@@ -41,7 +38,7 @@ const LoginForm = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleSubmit}>Login</button>
       {error && <div>{error}</div>}
     </div>
   );
