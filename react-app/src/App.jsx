@@ -3,16 +3,49 @@ import LoginForm from "./components/pets/LoginForm";
 //import { Pets } from "./components/pets/Pets";
 //import { Login } from "./components/pets/LoginForm";
 import BondsPage from "./components/pets/BondsPage";
+import { useState } from 'react';
 
 
 
 function App() {
+  const [loginSuccess, setLoginStatus] = useState(false);
 
   return (
   <div className="App">
-       {/* <h1>Bonds Page</h1> */}
-      <BondsPage />
+        {/* <div className="App">
+          { <h1>Login Page</h1> }
+          <LoginForm />
+        </div> */}
+        <div>
+        {
+          
+          !loginSuccess ?
+          <LoginForm loginSuccess = {setLoginStatus}/>
+          :<BondsPage/>
+        
+        }
+        </div>
+        
+        
+       
+       
+        {/* if (loginSuccess) {
+          return <BondsPage />;
+        }
+        return <LoginForm />; */}
+
+        
   </div>
+
+
+    // <div>
+    //   {
+    //     !loginSuccess ?
+    //     <LoginPage loginSuccess = {setLoginStatus}/>
+    //     :<BondsPage>
+    //   }
+    // </div>
+
   );
 }
 
