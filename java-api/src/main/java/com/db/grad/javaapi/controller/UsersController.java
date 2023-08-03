@@ -16,14 +16,15 @@ public class UsersController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/users")
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
-    }
+//    @GetMapping("/users")
+//    public List<User> getAllUsers() {
+//        return userService.getAllUsers();
+//    }
 
     @PostMapping("/users")
-    public User createUser(@Valid @RequestBody User user) {
-        return userService.addUser(user);
+    public boolean checkUser(@Valid @RequestBody String username, String password) {
+        System.out.println("post mapping worked");
+        return userService.verifyUser(username, password);
     }
 
 

@@ -53,6 +53,7 @@ public class UserService implements IUserService {
     public boolean verifyUser(String username, String password) {
 
         if ((itsUsersRepo.findByNameAndPassword(username, password)) != null) {
+
             return true;
         }
         return false;
