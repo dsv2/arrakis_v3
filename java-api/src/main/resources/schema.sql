@@ -6,9 +6,9 @@
 --    age INT NOT NULL
 --);
 
-DROP SCHEMA IF EXISTS `bonds`;
-CREATE SCHEMA `bonds`;
-use bonds;
+--DROP SCHEMA IF EXISTS `bonds`;
+--CREATE SCHEMA `bonds`;
+--use bonds;
 
 CREATE TABLE `book` (
   `id` int NOT NULL AUTO_INCREMENT,
