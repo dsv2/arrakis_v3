@@ -5,7 +5,7 @@ VALUES
 ('minahil', 'password098');
 
 DROP TABLE full_data IF EXISTS;
-CREATE TABLE  full_data  AS SELECT * FROM CSVREAD('C:\Users\Admin\Downloads\db-bonds-data.csv');
+CREATE TABLE  full_data  AS SELECT * FROM CSVREAD('db-bonds-data.csv');
 
 INSERT INTO BOOK(NAME)
 SELECT BOOK_NAME FROM full_data;
