@@ -1,5 +1,7 @@
 package com.db.grad.javaapi.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -12,6 +14,7 @@ public class Security {
     private String isin;
     private String cusip;
     private String issuer_name;
+    @DateTimeFormat(pattern = "yyyy/mm/dd")
     private Date maturity_date;
     private float coupon;
     private String type;
