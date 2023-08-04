@@ -11,25 +11,12 @@ function App() {
 
     const [loginSuccess, setLoginStatus] = useState(false);
 
-    const handleLoginSuccess = fetch("localhost:3030/UserController/checkUser", {
-        method: "POST"
-
-    })
-    if (handleLoginSuccess) {
-        setLoginStatus(true);
-    } else {
-        setLoginStatus(false)
-    }
-
-    //setLoginStatus(checkUser=true);
-
-
     return (
         <div className="App">
             <div className="App">
                 <h1>Login Page</h1>
                 {!loginSuccess ? <LoginForm
-                    LoginSuccess={handleLoginSuccess}
+                    loginSuccess={setLoginStatus}
                 /> : <BondsPage />}
             </div>
 
