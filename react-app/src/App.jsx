@@ -1,10 +1,9 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import LoginForm from "./components/pets/LoginForm";
-//import { Pets } from "./components/pets/Pets";
-//import { Login } from "./components/pets/LoginForm";
 import BondsPage from "./components/pets/BondsPage";
 import { useState } from 'react';
-
+import './App.css';
 
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
     return (
         <div className="App">
             <div className="App">
-                <h1>Login Page</h1>
                 {!loginSuccess ? <LoginForm
                     loginSuccess={setLoginStatus}
                 /> : <BondsPage />}

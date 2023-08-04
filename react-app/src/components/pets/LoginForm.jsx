@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { saveUser } from '../../services/BondsServices';
+import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 
 
 const LoginForm = (props) => {
@@ -26,58 +27,45 @@ const LoginForm = (props) => {
   }
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSubmit}>Login</button>
-      {error && <div>{error}</div>}
-    </div>
+    // <Row className='loginForm'>
+    //   <input
+    //     type="text"
+    //     placeholder="Username"
+    //     value={username}
+    //     onChange={(e) => setUsername(e.target.value)}
+    //   />
+    //   <input
+    //     type="password"
+    //     placeholder="Password"
+    //     value={password}
+    //     onChange={(e) => setPassword(e.target.value)}
+    //   />
+    //   <button onClick={handleSubmit}>Login</button>
+    //   {error && <div>{error}</div>}
+    // </Row>
+
+
+    <Row className='loginForm'>
+        <Form >
+            <Form.Group className="info" controlId="username">
+                <Form.Label>Username: </Form.Label>
+                <Form.Control type="text" placeholder="username" value={username}
+                onChange={(e) => setUsername(e.target.value)} />
+            </Form.Group>
+            <Form.Group className="info" controlId="password">
+                <Form.Label>Password: </Form.Label>
+                <Form.Control type="text" placeholder="password" value={password}
+                onChange={(e) => setPassword(e.target.value)}/>
+            </Form.Group>
+            
+            <Button variant="primary" type="submit" onClick={handleSubmit}>
+                Submit
+            </Button>
+        </Form>
+    </Row>
+
   );
 };
 
 export default LoginForm;
-
-
-
-
-
-
-
-
-
-// import React, { useState } from "react";
-
-// export const Login = (props) => {
-//     const [email, setEmail] = useState('');
-//     const [pass, setPass] = useState('');
-
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-//         console.log(email);
-//     }
-
-//     return (
-//         <div className="auth-form-container">
-//             <h2>Login</h2>
-//             <form className="login-form" onSubmit={handleSubmit}>
-//                 <label htmlFor="email">email</label>
-//                 <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-//                 <label htmlFor="password">password</label>
-//                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-//                 <button type="submit">Log In</button>
-//             </form>
-//             <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
-//         </div>
-//     )
-// }
 

@@ -30,27 +30,27 @@ const getBondsFromAPI = () => {
   return (
 
 <Row >
-    <div>
+
       <h1>Security Table</h1>
-      <table>
+      <table class ='table'>
         <thead>
 
           <tr>
-            <th>ID</th>
-            <th>ISIN</th>
-            <th>CUSIP</th>
-            <th>issuer_name</th>
-            <th>maturity_date</th>
-            <th>coupon</th>
-            <th>type</th>
-            <th>face_value</th>
-            <th>currency</th>
-            <th>status</th>
+            <th scope = "col">ID</th>
+            <th scope = "col">ISIN</th>
+            <th scope = "col">CUSIP</th>
+            <th scope = "col">issuer_name</th>
+            <th scope = "col">maturity_date</th>
+            <th scope = "col">coupon</th>
+            <th scope = "col">type</th>
+            <th scope = "col">face_value</th>
+            <th scope = "col">currency</th>
+            <th scope = "col">status</th>
           </tr>
         </thead>
         <tbody>
           {bonds.map(bond=>(
-            <tr key={bond.id}>
+            <tr key={bond.id} scope = "row">
               <td>{bond.id}</td>
               <td>{bond.ISIN}</td>
               <td>{bond.CUSIP}</td>
@@ -65,9 +65,6 @@ const getBondsFromAPI = () => {
           ))}
         </tbody>
       </table>
-    </div>
-
-
 </Row>
     
   )
