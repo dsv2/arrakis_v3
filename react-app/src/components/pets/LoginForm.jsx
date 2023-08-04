@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { saveUser } from '../../services/PetServices';
+import { saveUser } from '../../services/BondsServices';
 
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -18,6 +18,7 @@ const LoginForm = () => {
    .then(res => {
       setUsername('');
       setPassword('');
+      props.loginSuccess(true);
       })
     .catch(err=>{
        console.log(err);
