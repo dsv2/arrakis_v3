@@ -9,3 +9,7 @@ export function saveUser(user){
   return http.get("/securities")
 }
 
+export function saveDate(date) {
+  return http.get("/securities")
+}
+

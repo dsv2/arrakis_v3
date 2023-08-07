@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 15px;
+
 }
 
 .App-logo {
@@ -15,7 +19,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +32,20 @@
   color: #61dafb;
 }
 
+.loginForm {
+  background-color: rgba(228, 235, 238, 0.8);
+  padding:30px;
+  border-radius:10px;
+}
+
+.button {
+  padding:15px;
+}
+
+.bondsbutton {
+  max-width: 80px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,5 +54,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.loginForm {
+  max-width: 300px;
+  margin: 35px auto;
+}
+
+#login .loginForm{
+  max-width: 400px;
+  margin: 35px auto;
+  padding:0px 25px;
+}
+
+table tr:hover td{
+  background: rgba(228, 235, 238, 0.8);
+  cursor:pointer;
+}
+
 
 

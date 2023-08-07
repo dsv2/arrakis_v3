@@ -45,8 +45,8 @@ const LoginForm = (props) => {
     // </Row>
 
 
-    <Row className='loginForm'>
-        <Form >
+    <Row className='loginForm' >
+        <Form class="loginForm">
             <Form.Group className="info" controlId="username">
                 <Form.Label>Username: </Form.Label>
                 <Form.Control type="text" placeholder="username" value={username}
@@ -54,10 +54,9 @@ const LoginForm = (props) => {
             </Form.Group>
             <Form.Group className="info" controlId="password">
                 <Form.Label>Password: </Form.Label>
-                <Form.Control type="text" placeholder="password" value={password}
+                <Form.Control type="password" placeholder="password" value={password}
                 onChange={(e) => setPassword(e.target.value)}/>
-            </Form.Group>
-            
+            </Form.Group><br></br>
             <Button variant="primary" type="submit" onClick={handleSubmit}>
                 Submit
             </Button>
