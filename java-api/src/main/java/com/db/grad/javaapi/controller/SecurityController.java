@@ -23,8 +23,13 @@ public class SecurityController {
         return securityService.getAllSecurityBonds();
     }
 
-    @GetMapping("/securities/{selectedDate}")
+//    @GetMapping("/securities/{selectedDate}")
     public List<Security> getAllSecuritiesBeforeDate(@PathVariable Date selectedDate) {
         return securityService.getAllWithDateBefore(selectedDate);
+    }
+
+    @GetMapping("/securities/{selectedDate}")
+    public List<Security> getAllSecuritiesBeforeAndAfterDate(@PathVariable Date selectedDate) {
+        return securityService.getAllWithDateBeforeAndAfter(selectedDate);
     }
 }

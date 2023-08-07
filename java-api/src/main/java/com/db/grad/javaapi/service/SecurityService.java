@@ -24,4 +24,17 @@ public class SecurityService {
         LocalDate fiveDaysBeforeDate = inputDate.minusDays(5);
         return securityRepository.findAllWithDateBefore(selectedDate, fiveDaysBeforeDate);
     }
+
+    public List<Security> getAllWithDateAfter(Date selectedDate) {
+        LocalDate inputDate = selectedDate.toLocalDate();
+        LocalDate fiveDaysAfterDate = inputDate.plusDays(5);
+        return securityRepository.findAllWithDateAfter(selectedDate, fiveDaysAfterDate);
+    }
+
+    public List<Security> getAllWithDateBeforeAndAfter(Date selectedDate) {
+        LocalDate inputDate = selectedDate.toLocalDate();
+        LocalDate fiveDaysBeforeDate = inputDate.minusDays(5);
+        LocalDate fiveDaysAfterDate = inputDate.plusDays(5);
+        return securityRepository.findAllWithDateBeforeAndAfter(fiveDaysBeforeDate, fiveDaysAfterDate);
+    }
 }
