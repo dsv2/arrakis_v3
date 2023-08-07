@@ -5,7 +5,7 @@ import java.sql.Date;
 
 @Entity
 @Table(name="trades")
-public class Trades {
+public class Trade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

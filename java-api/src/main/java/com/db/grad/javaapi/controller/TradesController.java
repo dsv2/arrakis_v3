@@ -1,6 +1,6 @@
 package com.db.grad.javaapi.controller;
 
-import com.db.grad.javaapi.model.Trades;
+import com.db.grad.javaapi.model.Trade;
 import com.db.grad.javaapi.service.TradesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,7 +17,7 @@ public class TradesController {
     TradesService tradesService;
 
     @GetMapping("/trades")
-    public List<Trades> getAllSecurities() {
+    public List<Trade> getAllSecurities() {
         return tradesService.getAllTrades();
     }
 }
