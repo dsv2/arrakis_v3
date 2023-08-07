@@ -67,8 +67,8 @@ CREATE TABLE `trades` (
   `trade_date` datetime NOT NULL,
   `settlement_date` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN key (security_id) REFERENCES security(id),
-  FOREIGN key (counterparty_id) REFERENCES counterparty(id),
+  FOREIGN key (security_id) REFERENCES security(id) ,
+  FOREIGN key (counterparty_id) REFERENCES counterparty(id) ,
   FOREIGN key (book_id) REFERENCES book(id)
 --  KEY `FK_security_id` (`security_id`),
 --  KEY `FK_counterparty_id` (`counterparty_id`),
