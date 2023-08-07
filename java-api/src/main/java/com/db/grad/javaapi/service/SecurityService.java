@@ -5,6 +5,8 @@ import com.db.grad.javaapi.repository.SecurityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -15,5 +17,11 @@ public class SecurityService {
 
     public List<Security> getAllSecurityBonds() {
         return securityRepository.findAll();
+    }
+
+    public List<Security> getAllWithDateBefore(Date selectedDate) {
+        LocalDate inputDate = selectedDate.toLocalDate();
+        LocalDate fiveDaysBeforeDate = inputDate.minusDays(5);
+        return securityRepository.findAllWithDateBefore(selectedDate, fiveDaysBeforeDate);
     }
 }
