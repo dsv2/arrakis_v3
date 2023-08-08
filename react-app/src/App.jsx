@@ -16,7 +16,8 @@ function App() {
             <div className="App">
                 {!loginSuccess ? <LoginForm
                     loginSuccess={setLoginStatus}
-                /> : <TradesPage />}
+                /> : <><TradesPage /><BondsPage /></>}
+                    
             </div>
 
             <div>
