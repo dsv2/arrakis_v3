@@ -19,10 +19,12 @@ const LoginForm = (props) => {
    .then(res => {
       setUsername('');
       setPassword('');
-      props.loginSuccess(true);
+      console.log(res.data);
+      props.loginSuccess(res.data);
       })
     .catch(err=>{
        console.log(err);
+       props.loginSuccess(false);
       })
   }
 

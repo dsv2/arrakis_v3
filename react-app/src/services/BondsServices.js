@@ -6,10 +6,13 @@ export function getAllBonds(){
 }
 
 export function saveUser(user){
-  return http.get("/securities")
+  return http.post("/users", user)
 }
 
 export function saveDate(date) {
   return http.get("/securities")
 }
 
+export function getAllTrades(){
+  return http.get("/trades")
+}

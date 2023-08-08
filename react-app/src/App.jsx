@@ -4,6 +4,7 @@ import LoginForm from "./components/pets/LoginForm";
 import BondsPage from "./components/pets/BondsPage";
 import { useState } from 'react';
 import './App.css';
+import { TradesPage } from './components/pets/TradesPage';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <div className="App">
                 {!loginSuccess ? <LoginForm
                     loginSuccess={setLoginStatus}
-                /> : <BondsPage />}
+                /> : <TradesPage />}
             </div>
 
             <div>
