@@ -1,10 +1,11 @@
 import React from 'react'
 import { Col, Button, Row} from "react-bootstrap";
-import { saveDate } from '../../services/BondsServices';
+import { getAllTrades, saveDate } from '../../services/BondsServices';
 import { getAllBonds } from '../../services/BondsServices';
 
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const BondsPage = () => {
@@ -50,6 +51,7 @@ const BondsPage = () => {
   <Row >
 
     <h1>Security Table</h1>
+    
 
     <label for="datepicker">Maturity date:</label>
 
@@ -95,5 +97,8 @@ const BondsPage = () => {
       
   )
 }
+
+
+
 
 export default BondsPage

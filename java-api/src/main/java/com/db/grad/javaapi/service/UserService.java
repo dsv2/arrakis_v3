@@ -52,11 +52,12 @@ public class UserService implements IUserService {
     @Override
     public boolean verifyUser(String username, String password) {
 
-        if ((itsUsersRepo.findByNameAndPassword(username, password)) != null) {
+        if ((itsUsersRepo.findByNameAndPassword(username, password)).isEmpty()) {
 
+            return false;
+        }else{
             return true;
         }
-        return false;
     }
 
     @Override
